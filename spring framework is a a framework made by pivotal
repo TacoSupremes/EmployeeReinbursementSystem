@@ -1,0 +1,47 @@
+spring framework is a a framework made by pivotal to allow for creation of modern java apps.
+
+Spring Web Mvc Spring Boot
+
+tight coupling happens when classes are too dependent on each other. bad because chaNGES TO ONE part can break other parts.
+
+library gives functions but i can use as i want/ framework defines how i create the project.
+
+dependency injection is when spring eill inject the my spring beans for me
+
+types consturctor setter, field, lookup
+
+
+init, destroyed
+
+spring modules security, spring web-mvc AOP 
+
+
+spring boot, spring data, spring cloud
+
+ioc is manages stores and creates beans
+
+Eagerly makes beans
+
+old one was bean factory
+lazily makes beans
+
+(dispatcherservlet) is used by spring web mvc
+
+controller is abstraction of a servlet. 
+
+handler mapping interface 
+
+aspect is advice + pointcut
+
+join point is where you could apply the advice.
+
+controller returns a view from webmvc
+
+restcontroller specifices that is returning aobect to the response body.
+
+aspect is pint where you want to inject advice.
+
+advice can be prints/debug
+
+ pointcut expression targets methods that you wantcode to run on. can target all methods in a class or 
+
