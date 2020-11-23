@@ -1,0 +1,24 @@
+.test{
+    color: rgba(255,255,255,.5);
+}
+.test:hover {
+    color: rgba(255,255,255,.75);
+}
+.centerDiv{
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.deadCenterDiv{
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+

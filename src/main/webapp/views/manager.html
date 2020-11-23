@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <!--Metadata goes here-->
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Home</title>    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles/navbar.css">  
+        <link rel="stylesheet" href="../styles/requests.css">
+        <link rel="stylesheet" href="../styles/card.css">    
+    </head>
+
+    <body>
+   
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">EmployeePortal</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarsExample02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./profile.html">My Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./requests.html">Requests</a>
+                    </li>
+                    <li class="nav-item active manager">
+                        <a class="nav-link" href="./manager.html">Management<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                    <!--Anything out side of list is aligned to right-->
+                <a class="nav-link test" href="#" id="logout">Logout</a>
+
+            </div>
+        </div>
+    </nav>
+        <div class="container">
+        <div style="display:table; margin: 0 auto">
+        <h1>Pending Requests</h1>
+        </div>
+        <table class="table table1">
+         
+            <tr>
+                <th>Made by</th>
+                <th>Amount</th>
+                <th>Reason</th>
+                <th>Date Created</th>
+                <th>Date Reviewed</th>
+                <th>Receipt Photo</th>
+                <th>Approve/Deny</th>
+            </tr>
+    
+        </table>
+
+        <div style="display:table; margin: 0 auto">
+            <h1>All Requests</h1>
+            </div>
+
+        <table class="table table2">
+         
+            <tr>
+                <th>Status</th>
+                <th>Made by</th>
+                <th>Amount</th>
+                <th>Reason</th>
+                <th>Date Created</th>
+                <th>Date Reviewed</th>
+                <th>Receipt Photo</th>
+                <th>Assigned to</th>
+            </tr>
+    
+        </table>
+
+            <div class="centerDiv">
+                <button id="myBtn">Create new account</button>
+            </div>
+        
+
+            <div id="myModal" class="modal">
+
+                <div style="margin:150px">
+                 <div class="card">
+                         <span class="close">&times;</span>
+                     <form id="requestform" action="/ExpenseReimbursementSystem/api/newUser" method="post" enctype="multipart/form-data">
+                         <div class="form-label-group">
+                             <input id="firstname" name="firstname" class="form-control" placeholder="First name" required="" autofocus="">
+                             <label for="reason">First name</label>
+                         </div>
+                         <div class="form-label-group">
+                            <input id="lastname" name="lastname" class="form-control" placeholder="Last name" required="" autofocus="">
+                            <label for="lastname">Last name</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input id="email" name="email" class="form-control" placeholder="Email" required="" autofocus="">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input id="password" name="password" class="form-control" placeholder="Password" required="" autofocus="">
+                            <label for="password">Password</label>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input id="manager" name="manager" class="form-control"  autofocus="" type="checkbox">
+                            <label for="manager">Manager</label>
+                        </div>
+                         
+                         <button class="btn btn-lg btn-primary btn-block" type="submit">Create new account</button>
+                     </form>
+                 </div>
+             </div>
+               
+             
+            </div>
+
+             <div style="display:table; margin: 0 auto">
+                <h1>All Users</h1>
+                </div>
+
+                <table class="table table3">
+         
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Manager</th>
+                        <th>Managed by</th>
+
+                    </tr>
+            
+                </table>
+
+        <form method="post" action="/ExpenseReimbursementSystem/api/logout" id="logoutForm" hidden>
+            <input type="submit" name="logout" value="Logout" />
+            
+        </form>
+
+    </div>
+        
+    </body>
+
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/manager.js"></script>
+
+</html>
