@@ -7,7 +7,7 @@ EmployeeReinbursementSystem is a web portal that allows for employees to file re
 
 ## Manager
 - Managers are in charge of approving requests.
-- A manager cannot approve their own requests.
+- Managers cannot approve their own requests.
 - Managers can view all requests but only approve them if they are assigned to them.
 - Managers are assigned users when an employee account is created.
 - Managers also can file for requests much like Employees
